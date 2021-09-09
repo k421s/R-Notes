@@ -1,0 +1,53 @@
+#Hw: Determine what the parameters 
+#in red mean and write a paragraph 
+#explaining them.
+
+#red parameters:
+#cex
+#mai
+#fig
+#new
+
+par(cex=0.7, mai=c(0.1,0.1,0.2,0.1))
+Temperature <‐ airquality$Temp
+
+parameters in red are graphical arguments within par() used to customize features of graphs. 
+
+cex
+  changes the level of magnification of plotting text and symbols relative to default = 1
+  less than one reduces size, greater than one increases size 
+
+Mai
+  defines the margins in inches
+  is a numerical vector of the form c(bottom, left, top, right)
+
+fig
+  gives the (NDC) coordinates of the figure region
+  is a vector c(x1, x2, y1, y2)
+  unlike s, starts a new plot 
+
+new
+  Determines if the frame is cleaned before drawing a high-level plotting command 
+  logical, defualt = FALSE
+
+cex = 0.7 smaller labels
+mai = c(0.1,0.1,0.2,0.1)  0.1 & 0.2 inches
+fig = c(0.1,0.7,0.3,0.9))  
+new = true means doesn't redraw 
+
+# Use ?locator to find all the values for
+# this function and describe them in a
+# paragraph
+
+#Hw exercise pg 17 
+# 2 ( )
+
+install.packages(car)
+#library("<the package's name>")
+
+data1 <- read.table("scatter1.txt",header=T)
+attach(data1)
+names(data1)
+
+
+plot(x1,y1,col="red")
